@@ -9,7 +9,14 @@ const repairRoutes = require('./routes/repairRoutes'); // <-- ADD THIS
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://basirah-360.vercel.app',
+    'http://localhost:5173',
+    'http://localhost:3000'
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 app.get('/', (req, res) => {
