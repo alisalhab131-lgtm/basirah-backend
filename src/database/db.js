@@ -9,11 +9,16 @@ const pool = new Pool({
   password: process.env.DB_PASSWORD,
   ssl: {
     rejectUnauthorized: false
-  }
+  },
+  // Extra safety guardrails for production:
+  max: 10, // Max connections allowed at once
+  idleTimeoutMillis: 30000, // Close lazy connections automatically after 30 seconds
+  connectionTimeoutMillis: 2000 // Error out quickly instead of hanging if Neon is asleep
 });
 
-pool.connect()
-  .then(() => console.log('✅ PostgreSQL connected'))
-  .catch(err => console.error('❌ Database Error:', err.message));
+// Test query to log connection on boot without locking a slot open
+pool.query('SELECT NOW()')
+  .then(() => console.log('✅ PostgreSQL Connection Operational'))
+  .catch(err => console.error('❌ Database Connection Error:', err.message));
 
 module.exports = pool;
