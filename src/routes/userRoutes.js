@@ -1,36 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const {
-  getUsers,
-  createUser,
-  deleteUser
-} = require('../controllers/userController');
+const { getUsers, createUser, deleteUser } = require('../controllers/userController');
 
-const {
-  verifyToken,
-  requireRole
-} = require('../middleware/authMiddleware');
+// PUBLIC (NO TOKEN)
+router.post('/', createUser);
 
-router.get(
-  '/',
-  verifyToken,
-  requireRole(['admin']),
-  getUsers
-);
-
-router.post(
-  '/',
-  verifyToken,
-  requireRole(['admin']),
-  createUser
-);
-
-router.delete(
-  '/:id',
-  verifyToken,
-  requireRole(['admin']),
-  deleteUser
-);
+// PROTECTED (optional later)
+router.get('/', getUsers);
+router.delete('/:id', deleteUser);
 
 module.exports = router;

@@ -1,9 +1,9 @@
-console.log("AUTH ROUTES FILE LOADED");
 const express = require('express');
 const router = express.Router();
 
-const { login } = require('../controllers/authController');
-
-router.post('/login', login);
+router.post('/login', (req, res) => {
+  console.log("🔥 LOGIN ROUTE WORKING");
+  res.json({ ok: true });
+});
 
 module.exports = router;
