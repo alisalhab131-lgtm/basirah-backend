@@ -1,7 +1,6 @@
-```javascript
 const express = require('express');
 const cors = require('cors');
-const db = require('./database/db'); // Safe connection link
+const db = require('./database/db'); 
 
 const materialRoutes = require('./routes/materialRoutes');
 const contractorRoutes = require('./routes/contractorRoutes');
