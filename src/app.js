@@ -50,4 +50,5 @@ app.use('/api/loans', loanRoutes);
 app.use('/api/returns', returnRoutes);
 app.use('/api/repairs', repairRoutes); 
 
+// ONLY export the app. DO NOT listen here.
 module.exports = app;
