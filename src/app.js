@@ -1,5 +1,7 @@
+```javascript
 const express = require('express');
 const cors = require('cors');
+const db = require('./database/db'); // Safe connection link
 
 const materialRoutes = require('./routes/materialRoutes');
 const contractorRoutes = require('./routes/contractorRoutes');
@@ -14,14 +16,13 @@ const app = express();
 // =========================================================
 app.use(cors({
   origin: function (origin, callback) {
-    // Allow requests with no origin (like direct browser URLs, Postman, or curl)
     if (!origin) return callback(null, true);
     
     if (
       origin === 'https://basirah-360.vercel.app' || 
       origin.includes('localhost') || 
       origin.includes('127.0.0.1') || 
-      origin.endsWith('.vercel.app') // Dynamically allows all automatic Vercel build URLs
+      origin.endsWith('.vercel.app') 
     ) {
       return callback(null, true);
     } else {
@@ -43,6 +44,26 @@ app.get('/', (req, res) => {
   });
 });
 
+// Live Database Test Route
+app.get('/db-test', async (req, res) => {
+  try {
+    const result = await db.query('SELECT NOW(), version();');
+    res.json({
+      success: true,
+      message: "Neon Database is fully integrated and responsive!",
+      timestamp: result.rows[0].now,
+      dbVersion: result.rows[0].version
+    });
+  } catch (err) {
+    console.error("Database test route failed:", err);
+    res.status(500).json({
+      success: false,
+      error: "Could not communicate with database",
+      details: err.message
+    });
+  }
+});
+
 // System Routes
 app.use('/api/materials', materialRoutes);
 app.use('/api/contractors', contractorRoutes);
@@ -50,5 +71,4 @@ app.use('/api/loans', loanRoutes);
 app.use('/api/returns', returnRoutes);
 app.use('/api/repairs', repairRoutes); 
 
-// ONLY export the app. DO NOT listen here.
 module.exports = app;
