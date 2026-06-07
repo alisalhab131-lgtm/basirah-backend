@@ -1,16 +1,25 @@
-console.log("🚨 SERVER FILE LOADED ON RENDER");
+console.log("🔥 APP.JS LOADED");
 
-require('dotenv').config();
+const express = require('express');
+const cors = require('cors');
 
-const app = require('./app');
+const app = express();
 
-// IMPORTANT: ensure DB loads AFTER env
-require('./database/db');
+// middleware
+app.use(cors());
+app.use(express.json());
 
-const PORT = process.env.PORT || 5000;
+// ROUTES
+const authRoutes = require('./routes/authRoutes');
+const userRoutes = require('./routes/userRoutes');
 
-app.listen(PORT, '0.0.0.0', () => {
-  console.log("=========================================");
-  console.log(`🚀 BASIRAH 360 CORE API ONLINE ON PORT ${PORT}`);
-  console.log("=========================================");
+// mount routes
+app.use('/api/auth', authRoutes);
+app.use('/api/users', userRoutes);
+
+// test route
+app.get('/', (req, res) => {
+  res.send('API is running...');
 });
+
+module.exports = app;

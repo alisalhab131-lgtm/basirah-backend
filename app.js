@@ -1,17 +1,22 @@
+console.log("🔥 APP LOADED");
+
 const express = require('express');
 const cors = require('cors');
 
 const app = express();
 
-// middleware
+// Middleware
 app.use(cors());
 app.use(express.json());
 
 // ROUTES
 const authRoutes = require('./routes/authRoutes');
-app.use('/api/auth', authRoutes);
+const userRoutes = require('./routes/userRoutes');
 
-// test route
+app.use('/api/auth', authRoutes);
+app.use('/api/users', userRoutes);
+
+// Test route
 app.get('/', (req, res) => {
   res.send('API is running...');
 });

@@ -1,0 +1,1220 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 88D6-0782
+
+ Directory of C:\Users\mapax\inventory-system\backend
+
+06/07/2026  09:44 PM               109 hash.js
+06/07/2026  11:06 PM               163 server.js
+               2 File(s)            272 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules
+
+06/03/2026  11:14 AM    <DIR>          ipaddr.js
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\accepts
+
+06/03/2026  11:14 AM             5,253 index.js
+               1 File(s)          5,253 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\anymatch
+
+06/03/2026  11:14 AM             3,180 index.js
+               1 File(s)          3,180 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\balanced-match\dist\commonjs
+
+06/03/2026  11:14 AM             1,779 index.js
+               1 File(s)          1,779 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\balanced-match\dist\esm
+
+06/03/2026  11:14 AM             1,608 index.js
+               1 File(s)          1,608 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\bcryptjs
+
+06/07/2026  01:33 PM            41,528 index.js
+               1 File(s)         41,528 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\bcryptjs\umd
+
+06/07/2026  01:33 PM            47,507 index.js
+               1 File(s)         47,507 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\binary-extensions
+
+06/03/2026  11:14 AM                54 index.js
+               1 File(s)             54 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\body-parser
+
+06/03/2026  11:14 AM             1,312 index.js
+               1 File(s)          1,312 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\body-parser\lib
+
+06/03/2026  11:14 AM             5,401 read.js
+06/03/2026  11:14 AM             2,031 utils.js
+               2 File(s)          7,432 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\body-parser\lib\types
+
+06/03/2026  11:14 AM             3,573 json.js
+06/03/2026  11:14 AM               799 raw.js
+06/03/2026  11:14 AM               663 text.js
+06/03/2026  11:14 AM             3,611 urlencoded.js
+               4 File(s)          8,646 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\brace-expansion\dist\commonjs
+
+06/03/2026  11:14 AM             6,906 index.js
+               1 File(s)          6,906 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\brace-expansion\dist\esm
+
+06/03/2026  11:14 AM             6,723 index.js
+               1 File(s)          6,723 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\braces
+
+06/03/2026  11:14 AM             4,380 index.js
+               1 File(s)          4,380 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\braces\lib
+
+06/03/2026  11:14 AM             1,501 compile.js
+06/03/2026  11:14 AM             1,589 constants.js
+06/03/2026  11:14 AM             2,797 expand.js
+06/03/2026  11:14 AM             6,899 parse.js
+06/03/2026  11:14 AM               708 stringify.js
+06/03/2026  11:14 AM             2,518 utils.js
+               6 File(s)         16,012 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\buffer-equal-constant-time
+
+06/07/2026  01:33 PM             1,045 index.js
+06/07/2026  01:33 PM             1,013 test.js
+               2 File(s)          2,058 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\bytes
+
+06/03/2026  11:14 AM             3,613 index.js
+               1 File(s)          3,613 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\call-bind-apply-helpers
+
+06/03/2026  11:14 AM               280 actualApply.js
+06/03/2026  11:14 AM               264 applyBind.js
+06/03/2026  11:14 AM                99 functionApply.js
+06/03/2026  11:14 AM                97 functionCall.js
+06/03/2026  11:14 AM               511 index.js
+06/03/2026  11:14 AM               132 reflectApply.js
+               6 File(s)          1,383 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\call-bind-apply-helpers\test
+
+06/03/2026  11:14 AM             2,658 index.js
+               1 File(s)          2,658 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\call-bound
+
+06/03/2026  11:14 AM               687 index.js
+               1 File(s)            687 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\call-bound\test
+
+06/03/2026  11:14 AM             2,418 index.js
+               1 File(s)          2,418 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\chokidar
+
+06/03/2026  11:14 AM            28,379 index.js
+               1 File(s)         28,379 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\chokidar\lib
+
+06/03/2026  11:14 AM             1,878 constants.js
+06/03/2026  11:14 AM            16,368 fsevents-handler.js
+06/03/2026  11:14 AM            20,067 nodefs-handler.js
+               3 File(s)         38,313 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\content-disposition
+
+06/03/2026  11:14 AM            12,563 index.js
+               1 File(s)         12,563 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\content-type
+
+06/03/2026  11:14 AM             5,002 index.js
+               1 File(s)          5,002 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\cookie
+
+06/03/2026  11:14 AM             8,166 index.js
+               1 File(s)          8,166 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\cookie-signature
+
+06/03/2026  11:14 AM             1,413 index.js
+               1 File(s)          1,413 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\cors\lib
+
+06/03/2026  11:14 AM             6,587 index.js
+               1 File(s)          6,587 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\debug\src
+
+06/03/2026  11:14 AM             6,103 browser.js
+06/03/2026  11:14 AM             6,915 common.js
+06/03/2026  11:14 AM               314 index.js
+06/03/2026  11:14 AM             4,728 node.js
+               4 File(s)         18,060 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\depd
+
+06/03/2026  11:14 AM            10,932 index.js
+               1 File(s)         10,932 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\depd\lib\browser
+
+06/03/2026  11:14 AM             1,512 index.js
+               1 File(s)          1,512 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\dotenv
+
+06/03/2026  11:14 AM               176 config.js
+               1 File(s)            176 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\dotenv\lib
+
+06/03/2026  11:14 AM               385 cli-options.js
+06/03/2026  11:14 AM               733 env-options.js
+06/03/2026  11:14 AM            11,927 main.js
+               3 File(s)         13,045 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\dunder-proto
+
+06/03/2026  11:14 AM               980 get.js
+06/03/2026  11:14 AM             1,276 set.js
+               2 File(s)          2,256 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\dunder-proto\test
+
+06/03/2026  11:14 AM             1,143 get.js
+06/03/2026  11:14 AM                51 index.js
+06/03/2026  11:14 AM             1,695 set.js
+               3 File(s)          2,889 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\ecdsa-sig-formatter\src
+
+06/07/2026  01:33 PM             5,009 ecdsa-sig-formatter.js
+06/07/2026  01:33 PM               456 param-bytes-for-alg.js
+               2 File(s)          5,465 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\ee-first
+
+06/03/2026  11:14 AM             1,684 index.js
+               1 File(s)          1,684 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\encodeurl
+
+06/03/2026  11:14 AM             1,578 index.js
+               1 File(s)          1,578 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\es-define-property
+
+06/03/2026  11:14 AM               288 index.js
+               1 File(s)            288 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\es-define-property\test
+
+06/03/2026  11:14 AM             1,299 index.js
+               1 File(s)          1,299 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\es-errors
+
+06/03/2026  11:14 AM                75 eval.js
+06/03/2026  11:14 AM                66 index.js
+06/03/2026  11:14 AM                77 range.js
+06/03/2026  11:14 AM                79 ref.js
+06/03/2026  11:14 AM                79 syntax.js
+06/03/2026  11:14 AM                75 type.js
+06/03/2026  11:14 AM                73 uri.js
+               7 File(s)            524 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\es-errors\test
+
+06/03/2026  11:14 AM               356 index.js
+               1 File(s)            356 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\es-object-atoms
+
+06/03/2026  11:14 AM                67 index.js
+06/03/2026  11:14 AM               161 isObject.js
+06/03/2026  11:14 AM               313 RequireObjectCoercible.js
+06/03/2026  11:14 AM               250 ToObject.js
+               4 File(s)            791 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\es-object-atoms\test
+
+06/03/2026  11:14 AM             1,097 index.js
+               1 File(s)          1,097 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\escape-html
+
+06/03/2026  11:14 AM             1,362 index.js
+               1 File(s)          1,362 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\etag
+
+06/03/2026  11:14 AM             2,479 index.js
+               1 File(s)          2,479 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\express
+
+06/03/2026  11:14 AM               224 index.js
+               1 File(s)            224 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\express\lib
+
+06/03/2026  11:14 AM            13,971 application.js
+06/03/2026  11:14 AM             1,636 express.js
+06/03/2026  11:14 AM            11,688 request.js
+06/03/2026  11:14 AM            24,876 response.js
+06/03/2026  11:14 AM             5,293 utils.js
+06/03/2026  11:14 AM             3,809 view.js
+               6 File(s)         61,273 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\fill-range
+
+06/03/2026  11:14 AM             6,406 index.js
+               1 File(s)          6,406 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\finalhandler
+
+06/03/2026  11:14 AM             5,818 index.js
+               1 File(s)          5,818 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\forwarded
+
+06/03/2026  11:14 AM             1,578 index.js
+               1 File(s)          1,578 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\fresh
+
+06/03/2026  11:14 AM             2,705 index.js
+               1 File(s)          2,705 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\function-bind
+
+06/03/2026  11:14 AM             2,043 implementation.js
+06/03/2026  11:14 AM               126 index.js
+               2 File(s)          2,169 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\function-bind\test
+
+06/03/2026  11:14 AM             8,991 index.js
+               1 File(s)          8,991 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\get-intrinsic
+
+06/03/2026  11:14 AM            14,439 index.js
+               1 File(s)         14,439 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\get-intrinsic\test
+
+06/03/2026  11:14 AM             8,758 GetIntrinsic.js
+               1 File(s)          8,758 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\get-proto
+
+06/03/2026  11:14 AM               821 index.js
+06/03/2026  11:14 AM               156 Object.getPrototypeOf.js
+06/03/2026  11:14 AM               150 Reflect.getPrototypeOf.js
+               3 File(s)          1,127 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\get-proto\test
+
+06/03/2026  11:14 AM             2,359 index.js
+               1 File(s)          2,359 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\glob-parent
+
+06/03/2026  11:14 AM             1,120 index.js
+               1 File(s)          1,120 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\gopd
+
+06/03/2026  11:14 AM                97 gOPD.js
+06/03/2026  11:14 AM               206 index.js
+               2 File(s)            303 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\gopd\test
+
+06/03/2026  11:14 AM               656 index.js
+               1 File(s)            656 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\has-flag
+
+06/03/2026  11:14 AM               320 index.js
+               1 File(s)            320 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\has-symbols
+
+06/03/2026  11:14 AM               447 index.js
+06/03/2026  11:14 AM             1,922 shams.js
+               2 File(s)          2,369 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\has-symbols\test
+
+06/03/2026  11:14 AM               654 index.js
+06/03/2026  11:14 AM             2,139 tests.js
+               2 File(s)          2,793 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\has-symbols\test\shams
+
+06/03/2026  11:14 AM               797 core-js.js
+06/03/2026  11:14 AM               760 get-own-property-symbols.js
+               2 File(s)          1,557 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\hasown
+
+06/03/2026  11:14 AM               206 index.js
+               1 File(s)            206 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\http-errors
+
+06/03/2026  11:14 AM             6,430 index.js
+               1 File(s)          6,430 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\iconv-lite\encodings
+
+06/03/2026  11:14 AM            20,464 dbcs-codec.js
+06/03/2026  11:14 AM             8,881 dbcs-data.js
+06/03/2026  11:14 AM               670 index.js
+06/03/2026  11:14 AM             6,560 internal.js
+06/03/2026  11:14 AM             2,114 sbcs-codec.js
+06/03/2026  11:14 AM            32,034 sbcs-data-generated.js
+06/03/2026  11:14 AM             4,527 sbcs-data.js
+06/03/2026  11:14 AM             5,097 utf16.js
+06/03/2026  11:14 AM             9,063 utf32.js
+06/03/2026  11:14 AM             8,580 utf7.js
+              10 File(s)         97,990 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\iconv-lite\lib
+
+06/03/2026  11:14 AM             1,035 bom-handling.js
+06/03/2026  11:14 AM             6,711 index.js
+06/03/2026  11:14 AM             2,979 streams.js
+               3 File(s)         10,725 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\iconv-lite\lib\helpers
+
+06/03/2026  11:14 AM               310 merge-exports.js
+               1 File(s)            310 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\ignore-by-default
+
+06/03/2026  11:14 AM               614 index.js
+               1 File(s)            614 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\inherits
+
+06/03/2026  11:14 AM               250 inherits.js
+06/03/2026  11:14 AM               753 inherits_browser.js
+               2 File(s)          1,003 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\ipaddr.js
+
+06/03/2026  11:14 AM             9,738 ipaddr.min.js
+               1 File(s)          9,738 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\ipaddr.js\lib
+
+06/03/2026  11:14 AM            19,333 ipaddr.js
+               1 File(s)         19,333 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\is-binary-path
+
+06/03/2026  11:14 AM               239 index.js
+               1 File(s)            239 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\is-extglob
+
+06/03/2026  11:14 AM               441 index.js
+               1 File(s)            441 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\is-glob
+
+06/03/2026  11:14 AM             3,628 index.js
+               1 File(s)          3,628 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\is-number
+
+06/03/2026  11:14 AM               411 index.js
+               1 File(s)            411 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\is-promise
+
+06/03/2026  11:14 AM               201 index.js
+               1 File(s)            201 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\jsonwebtoken
+
+06/07/2026  01:33 PM               767 decode.js
+06/07/2026  01:33 PM               276 index.js
+06/07/2026  01:33 PM             9,350 sign.js
+06/07/2026  01:33 PM             8,612 verify.js
+               4 File(s)         19,005 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\jsonwebtoken\lib
+
+06/07/2026  01:33 PM                99 asymmetricKeyDetailsSupported.js
+06/07/2026  01:33 PM               428 JsonWebTokenError.js
+06/07/2026  01:33 PM               362 NotBeforeError.js
+06/07/2026  01:33 PM               107 psSupported.js
+06/07/2026  01:33 PM                99 rsaPssKeyDetailsSupported.js
+06/07/2026  01:33 PM               412 timespan.js
+06/07/2026  01:33 PM               395 TokenExpiredError.js
+06/07/2026  01:33 PM             2,238 validateAsymmetricKey.js
+               8 File(s)          4,140 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\jwa
+
+06/07/2026  01:33 PM             6,800 index.js
+               1 File(s)          6,800 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\jws
+
+06/07/2026  01:33 PM               609 index.js
+               1 File(s)            609 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\jws\lib
+
+06/07/2026  01:33 PM             1,242 data-stream.js
+06/07/2026  01:33 PM             2,416 sign-stream.js
+06/07/2026  01:33 PM               262 tostring.js
+06/07/2026  01:33 PM             3,479 verify-stream.js
+               4 File(s)          7,399 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\lodash.includes
+
+06/07/2026  01:33 PM            18,716 index.js
+               1 File(s)         18,716 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\lodash.isboolean
+
+06/07/2026  01:33 PM             1,819 index.js
+               1 File(s)          1,819 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\lodash.isinteger
+
+06/07/2026  01:33 PM             6,036 index.js
+               1 File(s)          6,036 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\lodash.isnumber
+
+06/07/2026  01:33 PM             2,025 index.js
+               1 File(s)          2,025 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\lodash.isplainobject
+
+06/07/2026  01:33 PM             3,673 index.js
+               1 File(s)          3,673 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\lodash.isstring
+
+06/07/2026  01:33 PM             2,302 index.js
+               1 File(s)          2,302 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\lodash.once
+
+06/07/2026  01:33 PM             7,094 index.js
+               1 File(s)          7,094 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\math-intrinsics
+
+06/03/2026  11:14 AM                73 abs.js
+06/03/2026  11:14 AM                77 floor.js
+06/03/2026  11:14 AM               262 isFinite.js
+06/03/2026  11:14 AM               410 isInteger.js
+06/03/2026  11:14 AM               121 isNaN.js
+06/03/2026  11:14 AM               143 isNegativeZero.js
+06/03/2026  11:14 AM                73 max.js
+06/03/2026  11:14 AM                73 min.js
+06/03/2026  11:14 AM               218 mod.js
+06/03/2026  11:14 AM                73 pow.js
+06/03/2026  11:14 AM                77 round.js
+06/03/2026  11:14 AM               214 sign.js
+              12 File(s)          1,814 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\math-intrinsics\constants
+
+06/03/2026  11:14 AM               110 maxArrayLength.js
+06/03/2026  11:14 AM               231 maxSafeInteger.js
+06/03/2026  11:14 AM               197 maxValue.js
+               3 File(s)            538 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\math-intrinsics\test
+
+06/03/2026  11:14 AM             6,320 index.js
+               1 File(s)          6,320 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\media-typer
+
+06/03/2026  11:14 AM             3,090 index.js
+               1 File(s)          3,090 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\merge-descriptors
+
+06/03/2026  11:14 AM               616 index.js
+               1 File(s)            616 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\mime-db
+
+06/03/2026  11:14 AM               189 index.js
+               1 File(s)            189 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\mime-types
+
+06/03/2026  11:14 AM             4,546 index.js
+06/03/2026  11:14 AM             1,497 mimeScore.js
+               2 File(s)          6,043 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\minimatch\dist\commonjs
+
+06/03/2026  11:14 AM               492 assert-valid-pattern.js
+06/03/2026  11:14 AM            30,650 ast.js
+06/03/2026  11:14 AM             5,743 brace-expressions.js
+06/03/2026  11:14 AM             1,253 escape.js
+06/03/2026  11:14 AM            45,140 index.js
+06/03/2026  11:14 AM             1,390 unescape.js
+               6 File(s)         84,668 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\minimatch\dist\esm
+
+06/03/2026  11:14 AM               336 assert-valid-pattern.js
+06/03/2026  11:14 AM            30,416 ast.js
+06/03/2026  11:14 AM             5,611 brace-expressions.js
+06/03/2026  11:14 AM             1,133 escape.js
+06/03/2026  11:14 AM            43,810 index.js
+06/03/2026  11:14 AM             1,264 unescape.js
+               6 File(s)         82,570 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\ms
+
+06/03/2026  11:14 AM             3,024 index.js
+               1 File(s)          3,024 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\negotiator
+
+06/03/2026  11:14 AM             2,516 index.js
+               1 File(s)          2,516 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\negotiator\lib
+
+06/03/2026  11:14 AM             3,081 charset.js
+06/03/2026  11:14 AM             4,155 encoding.js
+06/03/2026  11:14 AM             3,409 language.js
+06/03/2026  11:14 AM             5,343 mediaType.js
+               4 File(s)         15,988 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\nodemon\bin
+
+06/03/2026  11:14 AM               436 nodemon.js
+               1 File(s)            436 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\nodemon\lib
+
+06/03/2026  11:14 AM                38 index.js
+06/03/2026  11:14 AM             8,978 nodemon.js
+06/03/2026  11:14 AM             1,930 spawn.js
+06/03/2026  11:14 AM             2,465 version.js
+               4 File(s)         13,411 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\nodemon\lib\cli
+
+06/03/2026  11:14 AM             1,089 index.js
+06/03/2026  11:14 AM             6,105 parse.js
+               2 File(s)          7,194 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\nodemon\lib\config
+
+06/03/2026  11:14 AM             1,249 command.js
+06/03/2026  11:14 AM               979 defaults.js
+06/03/2026  11:14 AM             7,124 exec.js
+06/03/2026  11:14 AM             2,511 index.js
+06/03/2026  11:14 AM             6,660 load.js
+               5 File(s)         18,523 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\nodemon\lib\help
+
+06/03/2026  11:14 AM               733 index.js
+               1 File(s)            733 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\nodemon\lib\monitor
+
+06/03/2026  11:14 AM                82 index.js
+06/03/2026  11:14 AM             7,018 match.js
+06/03/2026  11:14 AM            16,951 run.js
+06/03/2026  11:14 AM               488 signals.js
+06/03/2026  11:14 AM             6,567 watch.js
+               5 File(s)         31,106 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\nodemon\lib\rules
+
+06/03/2026  11:14 AM             2,667 add.js
+06/03/2026  11:14 AM             1,260 index.js
+06/03/2026  11:14 AM               804 parse.js
+               3 File(s)          4,731 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\nodemon\lib\utils
+
+06/03/2026  11:14 AM               946 bus.js
+06/03/2026  11:14 AM               829 clone.js
+06/03/2026  11:14 AM               690 colour.js
+06/03/2026  11:14 AM             2,624 index.js
+06/03/2026  11:14 AM             1,738 log.js
+06/03/2026  11:14 AM             1,186 merge.js
+               6 File(s)          8,013 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\normalize-path
+
+06/03/2026  11:14 AM             1,024 index.js
+               1 File(s)          1,024 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\object-assign
+
+06/03/2026  11:14 AM             2,108 index.js
+               1 File(s)          2,108 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\object-inspect
+
+06/03/2026  11:14 AM            19,059 index.js
+06/03/2026  11:14 AM               534 test-core-js.js
+06/03/2026  11:14 AM                42 util.inspect.js
+               3 File(s)         19,635 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\object-inspect\example
+
+06/03/2026  11:14 AM               391 all.js
+06/03/2026  11:14 AM               116 circular.js
+06/03/2026  11:14 AM               126 fn.js
+06/03/2026  11:14 AM               251 inspect.js
+               4 File(s)            884 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\object-inspect\test
+
+06/03/2026  11:14 AM             2,082 bigint.js
+06/03/2026  11:14 AM               451 circular.js
+06/03/2026  11:14 AM               400 deep.js
+06/03/2026  11:14 AM             1,575 element.js
+06/03/2026  11:14 AM             1,536 err.js
+06/03/2026  11:14 AM               683 fakes.js
+06/03/2026  11:14 AM             2,227 fn.js
+06/03/2026  11:14 AM               372 global.js
+06/03/2026  11:14 AM               514 has.js
+06/03/2026  11:14 AM               255 holes.js
+06/03/2026  11:14 AM             6,633 indent-option.js
+06/03/2026  11:14 AM             4,946 inspect.js
+06/03/2026  11:14 AM               268 lowbyte.js
+06/03/2026  11:14 AM             2,312 number.js
+06/03/2026  11:14 AM             1,530 quoteStyle.js
+06/03/2026  11:14 AM             1,546 toStringTag.js
+06/03/2026  11:14 AM               302 undef.js
+06/03/2026  11:14 AM             8,407 values.js
+              18 File(s)         36,039 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\object-inspect\test\browser
+
+06/03/2026  11:14 AM               416 dom.js
+               1 File(s)            416 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\on-finished
+
+06/03/2026  11:14 AM             4,430 index.js
+               1 File(s)          4,430 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\once
+
+06/03/2026  11:14 AM               935 once.js
+               1 File(s)            935 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\parseurl
+
+06/03/2026  11:14 AM             2,809 index.js
+               1 File(s)          2,809 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\path-to-regexp\dist
+
+06/03/2026  11:14 AM            14,528 index.js
+               1 File(s)         14,528 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pg\lib
+
+06/05/2026  07:35 PM            22,407 client.js
+06/05/2026  07:35 PM             5,282 connection-parameters.js
+06/05/2026  07:35 PM             5,147 connection.js
+06/05/2026  07:35 PM             2,506 defaults.js
+06/05/2026  07:35 PM             1,810 index.js
+06/05/2026  07:35 PM             7,314 query.js
+06/05/2026  07:35 PM             2,829 result.js
+06/05/2026  07:35 PM             2,132 stream.js
+06/05/2026  07:35 PM               770 type-overrides.js
+06/05/2026  07:35 PM             5,121 utils.js
+              10 File(s)         55,318 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pg\lib\crypto
+
+06/05/2026  07:35 PM             4,096 cert-signatures.js
+06/05/2026  07:35 PM             9,900 sasl.js
+06/05/2026  07:35 PM             2,649 utils.js
+               3 File(s)         16,645 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pg\lib\native
+
+06/05/2026  07:35 PM             8,699 client.js
+06/05/2026  07:35 PM                50 index.js
+06/05/2026  07:35 PM             4,757 query.js
+               3 File(s)         13,506 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pg-cloudflare\dist
+
+06/05/2026  07:35 PM               258 empty.js
+06/05/2026  07:35 PM             5,044 index.js
+               2 File(s)          5,302 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pg-connection-string
+
+06/05/2026  07:35 PM             7,208 index.js
+               1 File(s)          7,208 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pg-int8
+
+06/05/2026  07:35 PM             1,572 index.js
+               1 File(s)          1,572 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pg-pool
+
+06/05/2026  07:35 PM            14,460 index.js
+               1 File(s)         14,460 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pg-protocol\dist
+
+06/05/2026  07:35 PM               636 b.js
+06/05/2026  07:35 PM             1,606 buffer-reader.js
+06/05/2026  07:35 PM             2,772 buffer-writer.js
+06/05/2026  07:35 PM            19,515 inbound-parser.test.js
+06/05/2026  07:35 PM               791 index.js
+06/05/2026  07:35 PM             4,973 messages.js
+06/05/2026  07:35 PM            11,065 outbound-serializer.test.js
+06/05/2026  07:35 PM            13,444 parser.js
+06/05/2026  07:35 PM             6,937 serializer.js
+               9 File(s)         61,739 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pg-protocol\esm
+
+06/05/2026  07:35 PM               325 index.js
+               1 File(s)            325 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pg-types
+
+06/05/2026  07:35 PM             1,214 index.js
+               1 File(s)          1,214 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pg-types\lib
+
+06/05/2026  07:35 PM               208 arrayParser.js
+06/05/2026  07:35 PM             6,063 binaryParsers.js
+06/05/2026  07:35 PM             1,564 builtins.js
+06/05/2026  07:35 PM             5,367 textParsers.js
+               4 File(s)         13,202 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pg-types\test
+
+06/05/2026  07:35 PM               644 index.js
+06/05/2026  07:35 PM            11,731 types.js
+               2 File(s)         12,375 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pgpass\lib
+
+06/05/2026  07:35 PM             5,488 helper.js
+06/05/2026  07:35 PM               467 index.js
+               2 File(s)          5,955 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\picomatch
+
+06/03/2026  11:14 AM                60 index.js
+               1 File(s)             60 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\picomatch\lib
+
+06/03/2026  11:14 AM             4,563 constants.js
+06/03/2026  11:14 AM            33,950 parse.js
+06/03/2026  11:14 AM             9,956 picomatch.js
+06/03/2026  11:14 AM             9,189 scan.js
+06/03/2026  11:14 AM             1,885 utils.js
+               5 File(s)         59,543 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\postgres-array
+
+06/05/2026  07:35 PM             2,320 index.js
+               1 File(s)          2,320 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\postgres-bytea
+
+06/05/2026  07:35 PM               863 index.js
+               1 File(s)            863 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\postgres-date
+
+06/05/2026  07:35 PM             2,676 index.js
+               1 File(s)          2,676 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\postgres-interval
+
+06/05/2026  07:35 PM             3,413 index.js
+               1 File(s)          3,413 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\proxy-addr
+
+06/03/2026  11:14 AM             6,000 index.js
+               1 File(s)          6,000 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pstree.remy\lib
+
+06/03/2026  11:14 AM               800 index.js
+06/03/2026  11:14 AM               857 tree.js
+06/03/2026  11:14 AM             1,171 utils.js
+               3 File(s)          2,828 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pstree.remy\tests
+
+06/03/2026  11:14 AM             1,387 index.test.js
+               1 File(s)          1,387 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\pstree.remy\tests\fixtures
+
+06/03/2026  11:14 AM               282 index.js
+               1 File(s)            282 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\qs\dist
+
+06/03/2026  11:14 AM            51,803 qs.js
+               1 File(s)         51,803 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\qs\lib
+
+06/03/2026  11:14 AM               476 formats.js
+06/03/2026  11:14 AM               211 index.js
+06/03/2026  11:14 AM            15,584 parse.js
+06/03/2026  11:14 AM            11,688 stringify.js
+06/03/2026  11:14 AM            10,249 utils.js
+               5 File(s)         38,208 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\qs\test
+
+06/03/2026  11:14 AM             7,698 empty-keys-cases.js
+06/03/2026  11:14 AM            68,096 parse.js
+06/03/2026  11:14 AM            58,636 stringify.js
+06/03/2026  11:14 AM            16,720 utils.js
+               4 File(s)        151,150 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\range-parser
+
+06/03/2026  11:14 AM             2,900 index.js
+               1 File(s)          2,900 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\raw-body
+
+06/03/2026  11:14 AM             7,171 index.js
+               1 File(s)          7,171 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\readdirp
+
+06/03/2026  11:14 AM             8,876 index.js
+               1 File(s)          8,876 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\router
+
+06/03/2026  11:14 AM            15,866 index.js
+               1 File(s)         15,866 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\router\lib
+
+06/03/2026  11:14 AM             4,936 layer.js
+06/03/2026  11:14 AM             4,552 route.js
+               2 File(s)          9,488 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\safe-buffer
+
+06/07/2026  01:33 PM             1,670 index.js
+               1 File(s)          1,670 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\safer-buffer
+
+06/03/2026  11:14 AM             1,483 dangerous.js
+06/03/2026  11:14 AM             2,110 safer.js
+06/03/2026  11:14 AM            15,735 tests.js
+               3 File(s)         19,328 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\semver
+
+06/03/2026  11:14 AM             2,691 index.js
+06/03/2026  11:14 AM                83 preload.js
+               2 File(s)          2,774 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\semver\bin
+
+06/03/2026  11:14 AM             4,957 semver.js
+               1 File(s)          4,957 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\semver\classes
+
+06/03/2026  11:14 AM             3,631 comparator.js
+06/03/2026  11:14 AM               143 index.js
+06/03/2026  11:14 AM            15,207 range.js
+06/03/2026  11:14 AM             9,480 semver.js
+               4 File(s)         28,461 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\semver\functions
+
+06/03/2026  11:14 AM               205 clean.js
+06/03/2026  11:14 AM               961 cmp.js
+06/03/2026  11:14 AM             2,004 coerce.js
+06/03/2026  11:14 AM               281 compare-build.js
+06/03/2026  11:14 AM               132 compare-loose.js
+06/03/2026  11:14 AM               170 compare.js
+06/03/2026  11:14 AM             1,423 diff.js
+06/03/2026  11:14 AM               126 eq.js
+06/03/2026  11:14 AM               124 gt.js
+06/03/2026  11:14 AM               127 gte.js
+06/03/2026  11:14 AM               478 inc.js
+06/03/2026  11:14 AM               124 lt.js
+06/03/2026  11:14 AM               127 lte.js
+06/03/2026  11:14 AM               136 major.js
+06/03/2026  11:14 AM               136 minor.js
+06/03/2026  11:14 AM               128 neq.js
+06/03/2026  11:14 AM               331 parse.js
+06/03/2026  11:14 AM               136 patch.js
+06/03/2026  11:14 AM               234 prerelease.js
+06/03/2026  11:14 AM               132 rcompare.js
+06/03/2026  11:14 AM               163 rsort.js
+06/03/2026  11:14 AM               247 satisfies.js
+06/03/2026  11:14 AM               161 sort.js
+06/03/2026  11:14 AM             1,021 truncate.js
+06/03/2026  11:14 AM               176 valid.js
+              25 File(s)          9,283 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\semver\internal
+
+06/03/2026  11:14 AM               873 constants.js
+06/03/2026  11:14 AM               240 debug.js
+06/03/2026  11:14 AM               525 identifiers.js
+06/03/2026  11:14 AM               802 lrucache.js
+06/03/2026  11:14 AM               338 parse-options.js
+06/03/2026  11:14 AM             8,139 re.js
+               6 File(s)         10,917 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\semver\ranges
+
+06/03/2026  11:14 AM               231 gtr.js
+06/03/2026  11:14 AM               224 intersects.js
+06/03/2026  11:14 AM               227 ltr.js
+06/03/2026  11:14 AM               593 max-satisfying.js
+06/03/2026  11:14 AM               591 min-satisfying.js
+06/03/2026  11:14 AM             1,514 min-version.js
+06/03/2026  11:14 AM             2,204 outside.js
+06/03/2026  11:14 AM             1,355 simplify.js
+06/03/2026  11:14 AM             7,478 subset.js
+06/03/2026  11:14 AM               282 to-comparators.js
+06/03/2026  11:14 AM               326 valid.js
+              11 File(s)         15,025 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\send
+
+06/03/2026  11:14 AM            20,341 index.js
+               1 File(s)         20,341 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\serve-static
+
+06/03/2026  11:14 AM             4,489 index.js
+               1 File(s)          4,489 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\setprototypeof
+
+06/03/2026  11:14 AM               407 index.js
+               1 File(s)            407 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\setprototypeof\test
+
+06/03/2026  11:14 AM               690 index.js
+               1 File(s)            690 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\side-channel
+
+06/03/2026  11:14 AM             1,189 index.js
+               1 File(s)          1,189 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\side-channel\test
+
+06/03/2026  11:14 AM             2,573 index.js
+               1 File(s)          2,573 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\side-channel-list
+
+06/03/2026  11:14 AM             3,289 index.js
+               1 File(s)          3,289 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\side-channel-list\test
+
+06/03/2026  11:14 AM             4,130 index.js
+               1 File(s)          4,130 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\side-channel-map
+
+06/03/2026  11:14 AM             1,981 index.js
+               1 File(s)          1,981 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\side-channel-map\test
+
+06/03/2026  11:14 AM             2,875 index.js
+               1 File(s)          2,875 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\side-channel-weakmap
+
+06/03/2026  11:14 AM             2,708 index.js
+               1 File(s)          2,708 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\side-channel-weakmap\test
+
+06/03/2026  11:14 AM             2,969 index.js
+               1 File(s)          2,969 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\simple-update-notifier\build
+
+06/03/2026  11:14 AM             9,909 index.js
+               1 File(s)          9,909 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\split2
+
+06/05/2026  07:35 PM               472 bench.js
+06/05/2026  07:35 PM             3,764 index.js
+06/05/2026  07:35 PM             7,925 test.js
+               3 File(s)         12,161 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\statuses
+
+06/03/2026  11:14 AM             2,610 index.js
+               1 File(s)          2,610 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\supports-color
+
+06/03/2026  11:14 AM                67 browser.js
+06/03/2026  11:14 AM             2,771 index.js
+               2 File(s)          2,838 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\to-regex-range
+
+06/03/2026  11:14 AM             6,481 index.js
+               1 File(s)          6,481 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\toidentifier
+
+06/03/2026  11:14 AM               504 index.js
+               1 File(s)            504 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\touch
+
+06/03/2026  11:14 AM             4,972 index.js
+               1 File(s)          4,972 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\touch\bin
+
+06/03/2026  11:14 AM             2,612 nodetouch.js
+               1 File(s)          2,612 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\type-is
+
+06/03/2026  11:14 AM             5,396 index.js
+               1 File(s)          5,396 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\type-is\node_modules\content-type\dist
+
+06/03/2026  11:14 AM             5,351 index.js
+               1 File(s)          5,351 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\undefsafe
+
+06/03/2026  11:14 AM               245 example.js
+               1 File(s)            245 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\undefsafe\lib
+
+06/03/2026  11:14 AM             2,595 undefsafe.js
+               1 File(s)          2,595 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\unpipe
+
+06/03/2026  11:14 AM             1,118 index.js
+               1 File(s)          1,118 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\vary
+
+06/03/2026  11:14 AM             2,930 index.js
+               1 File(s)          2,930 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\wrappy
+
+06/03/2026  11:14 AM               905 wrappy.js
+               1 File(s)            905 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\node_modules\xtend
+
+06/05/2026  07:35 PM               384 immutable.js
+06/05/2026  07:35 PM               369 mutable.js
+06/05/2026  07:35 PM             2,307 test.js
+               3 File(s)          3,060 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\src
+
+06/07/2026  09:03 PM               459 server.js
+               1 File(s)            459 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\src\controllers
+
+06/07/2026  10:00 PM             3,225 authController.js
+06/05/2026  08:21 PM               897 contractorController.js
+06/05/2026  08:59 PM             2,055 loanController.js
+06/05/2026  07:41 PM             1,053 materialController.js
+06/05/2026  08:25 PM             2,079 repairController.js
+06/05/2026  08:24 PM             2,370 returnController.js
+06/07/2026  08:38 PM             1,324 userController.js
+               7 File(s)         13,003 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\src\database
+
+06/07/2026  11:23 AM               983 db.js
+               1 File(s)            983 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\src\middleware
+
+06/07/2026  01:37 PM             1,129 authMiddleware.js
+               1 File(s)          1,129 bytes
+
+ Directory of C:\Users\mapax\inventory-system\backend\src\routes
+
+06/08/2026  01:47 AM               356 authRoutes.js
+06/05/2026  08:15 PM               266 contractorRoutes.js
+06/05/2026  08:22 PM               234 loanRoutes.js
+06/05/2026  07:42 PM               267 materialRoutes.js
+06/05/2026  08:26 PM               244 repairRoutes.js
+06/05/2026  08:24 PM               244 returnRoutes.js
+06/07/2026  10:15 PM               339 userRoutes.js
+               7 File(s)          1,950 bytes
+
+     Total Files Listed:
+             437 File(s)      1,856,730 bytes
+               1 Dir(s)  331,704,803,328 bytes free
