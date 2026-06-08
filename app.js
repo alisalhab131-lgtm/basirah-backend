@@ -5,9 +5,14 @@ const cors = require('cors');
 
 const app = express();
 
-// Middleware
+// ================= MIDDLEWARE =================
 app.use(cors());
 app.use(express.json());
+
+// ================= TEST ROUTE =================
+app.get('/test', (req, res) => {
+  res.json({ message: "backend works" });
+});
 
 // ================= ROUTES =================
 const authRoutes = require('./routes/authRoutes');
@@ -25,7 +30,7 @@ app.use('/api/contractors', contractorRoutes);
 app.use('/api/loans', loanRoutes);
 app.use('/api/returns', returnRoutes);
 
-// Test route
+// ================= ROOT =================
 app.get('/', (req, res) => {
   res.send('API is running...');
 });
