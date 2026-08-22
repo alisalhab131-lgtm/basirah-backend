@@ -1,11 +1,17 @@
 const express = require('express');
 const router = express.Router();
-const { getMaterials, createMaterial, deleteMaterial, previewExcel, commitExcel } = require('../controllers/materialController');
+
+const {
+  getMaterials,
+  createMaterial,
+  uploadExcel,
+} = require('../controllers/materialController');
 
 router.get('/', getMaterials);
 router.post('/', createMaterial);
-router.delete('/:id', deleteMaterial);           // ← remove from stock
-router.post('/preview-excel', previewExcel);     // Step 1: smart-map, no DB write
-router.post('/commit-excel', commitExcel);        // Step 2: execute confirmed plan
+
+// uploadExcel is an array [multerMiddleware, asyncHandler]
+// Express accepts an array of middlewares in router.post()
+router.post('/upload-excel', uploadExcel);
 
 module.exports = router;
