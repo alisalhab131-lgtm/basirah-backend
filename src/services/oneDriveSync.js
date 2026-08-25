@@ -265,4 +265,8 @@ function startSyncLoop() {
   console.log(`[OneDrive] Sync loop started — polling every ${minutes} minutes`);
 }
 
-module.exports = { pushToOneDrive, pullFromOneDrive, startSyncLoop };
+module.exports = {
+  pushToOneDrive,
+  pullFromOneDrive,
+  startSyncLoop,
+};
