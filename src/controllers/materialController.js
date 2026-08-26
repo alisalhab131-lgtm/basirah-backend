@@ -90,7 +90,7 @@ const exportMaterials = async (req, res) => {
       'SELECT m.id, m.name, m.category, m.quantity AS in_stock, m.barcode, ' +
       'COUNT(l.id) FILTER (WHERE l.status NOT IN (1,2)) AS active_loans, ' +
       'COALESCE(SUM(l.quantity) FILTER (WHERE l.status NOT IN (3,4)),0) AS qty_on_loan ' +
-      'FROM materials m LEFT JOIN loans l ON l.material_id=m.id GROUP BY m.id ORDER BY m.name ASC'
+      'FROM materials m LEFT JOIN loans l ON l.material_id::integer=m.id GROUP BY m.id ORDER BY m.name ASC'
       .replace(/\$\{1\}/g,"'Returned'").replace(/\$\{2\}/g,"'Cancelled'")
       .replace(/\$\{3\}/g,"'Returned'").replace(/\$\{4\}/g,"'Cancelled'")
     );
@@ -103,7 +103,7 @@ const loanCheck = async (req, res) => {
     const { rows: loans } = await pool.query(
       'SELECT l.id, l.quantity, l.status, c.contact_person, c.company_name ' +
       'FROM loans l JOIN contractors c ON l.contractor_id=c.id ' +
-      'WHERE l.material_id=$1 AND l.status NOT IN (' + "'Returned','Cancelled'" + ')',
+      'WHERE l.material_id::integer=$1 AND l.status NOT IN (' + "'Returned','Cancelled'" + ')',
       [req.params.id]
     );
     res.json({ hasLoans: loans.length > 0, loans });
@@ -129,7 +129,7 @@ const deleteMaterial = async (req, res) => {
   try {
     await client.query('BEGIN');
     const { rows: active } = await client.query(
-      'SELECT id FROM loans WHERE material_id=$1 AND status NOT IN (' + "'Returned','Cancelled'" + ') LIMIT 1',
+      'SELECT id FROM loans WHERE material_id::integer=$1 AND status NOT IN (' + "'Returned','Cancelled'" + ') LIMIT 1',
       [id]
     );
     if (active.length && strategy === 'block') {
@@ -137,11 +137,11 @@ const deleteMaterial = async (req, res) => {
       return res.status(409).json({ error: 'Has active loans. Use cascade or soft.' });
     }
     if (strategy === 'cascade') {
-      await client.query('DELETE FROM loans WHERE material_id=$1', [id]);
+      await client.query('DELETE FROM loans WHERE material_id::integer=$1', [id]);
       await client.query('DELETE FROM materials WHERE id=$1', [id]);
     } else if (strategy === 'soft') {
       await client.query(
-        'UPDATE loans SET status=' + "'Cancelled'" + ' WHERE material_id=$1 AND status NOT IN (' + "'Returned','Cancelled'" + ')',
+        'UPDATE loans SET status=' + "'Cancelled'" + ' WHERE material_id::integer=$1 AND status NOT IN (' + "'Returned','Cancelled'" + ')',
         [id]
       );
       try { await client.query('UPDATE materials SET is_deleted=TRUE,deleted_at=NOW() WHERE id=$1', [id]); }
