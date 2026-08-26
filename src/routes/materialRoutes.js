@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const { getMaterials, exportMaterials, loanCheck, createMaterial, deleteMaterial, previewExcel, commitExcel } = require('../controllers/materialController');
 const { pushToOneDrive, pullFromOneDrive } = require('../services/oneDriveSync');
+
 router.get('/export', exportMaterials);
 router.post('/preview-excel', previewExcel);
 router.post('/commit-excel', commitExcel);
@@ -11,4 +12,5 @@ router.get('/', getMaterials);
 router.post('/', createMaterial);
 router.get('/:id/loan-check', loanCheck);
 router.delete('/:id', deleteMaterial);
+
 module.exports = router;
