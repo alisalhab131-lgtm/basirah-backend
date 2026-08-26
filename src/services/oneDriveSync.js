@@ -82,11 +82,29 @@ async function pullFromOneDrive() {
 }
 
 function startSyncLoop() {
-  if (!process.env.ONEDRIVE_REFRESH_TOKEN) { console.log('[OneDrive] Disabled - no refresh token'); return; }
-  const ms = parseInt(process.env.ONEDRIVE_SYNC_INTERVAL||'5',10)*60000;
-  const run = async(d) => { try { if(d==='pull') await pullFromOneDrive(); if(d==='push') await pushToOneDrive(); } catch(e) { console.error('[OneDrive] '+d+':',e.message); } };
-  setTimeout(()=>run('pull'),5000); setTimeout(()=>run('push'),12000); setInterval(()=>run('pull'),ms);
-  console.log('[OneDrive] Sync every '+(ms/60000)+' min');
+  if (!process.env.ONEDRIVE_REFRESH_TOKEN) { 
+    console.log('[OneDrive] Disabled - no refresh token'); 
+    return; 
+  }
+  
+  // Use parseFloat so intervals like '0.5' (30 seconds) work correctly. Default to 30 seconds.
+  const intervalMinutes = parseFloat(process.env.ONEDRIVE_SYNC_INTERVAL || '0.5');
+  const ms = intervalMinutes * 60000; 
+  
+  const run = async(d) => { 
+    try { 
+      if(d==='pull') await pullFromOneDrive(); 
+      if(d==='push') await pushToOneDrive(); 
+    } catch(e) { 
+      console.error('[OneDrive] '+d+':', e.message); 
+    } 
+  };
+  
+  setTimeout(()=>run('pull'), 5000); 
+  setTimeout(()=>run('push'), 12000); 
+  
+  setInterval(()=>run('pull'), ms);
+  console.log('[OneDrive] Sync loop started. Pulling every '+(ms/1000)+' seconds.');
 }
 
 module.exports = { pushToOneDrive, pullFromOneDrive, startSyncLoop };
