@@ -45,7 +45,8 @@ async function pushToOneDrive() {
   );
   const now = new Date().toISOString().replace('T',' ').slice(0,16);
   const values = [COLS, ...rows.map(r=>[r.id,r.name,r.category||'',Number(r.in_stock),r.barcode||'',Number(r.active_loans),Number(r.qty_on_loan),now])];
-  await gPatch(sheetPath()+'/range(address='+JSON.stringify('A1:'+colLetter(COLS.length-1)+values.length)+')', { values });
+  const rangeAddr = 'A1:' + colLetter(COLS.length - 1) + values.length;
+  await gPatch(sheetPath() + "/range(address='" + rangeAddr + "')", { values });
   console.log('[OneDrive] Pushed '+rows.length+' rows');
   return { pushed: rows.length };
 }
@@ -107,4 +108,9 @@ function startSyncLoop() {
   console.log('[OneDrive] Sync loop started. Pulling every '+(ms/1000)+' seconds.');
 }
 
-module.exports = { pushToOneDrive, pullFromOneDrive, startSyncLoop };
+async function listWorksheets() {
+  const data = await gGet('/me/drive/items/' + process.env.ONEDRIVE_FILE_ID + '/workbook/worksheets');
+  return data.value.map(w => ({ name: w.name, id: w.id, position: w.position }));
+}
+
+module.exports = { pushToOneDrive, pullFromOneDrive, startSyncLoop, listWorksheets };
