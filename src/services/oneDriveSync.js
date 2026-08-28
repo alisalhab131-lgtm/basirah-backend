@@ -138,4 +138,28 @@ function startSyncLoop() {
   console.log('[OneDrive] Sync every ' + (ms / 60000) + ' min');
 }
 
-module.exports = { pushToOneDrive, pullFromOneDrive, startSyncLoop, listWorksheets, getFileInfo };
+// ── Find a file by name anywhere in OneDrive (returns real item ID) ────────
+async function findFile(filename) {
+  const t = await getToken();
+  const r = await fetch(
+    G + "/me/drive/root/search(q='" + encodeURIComponent(filename) + "')",
+    { headers: { Authorization: 'Bearer ' + t } }
+  );
+  const body = await r.json();
+  if (!r.ok) throw new Error('Search failed ' + r.status + ': ' + JSON.stringify(body));
+  return (body.value || []).map(f => ({
+    id: f.id, name: f.name, webUrl: f.webUrl,
+    parentPath: f.parentReference ? f.parentReference.path : null,
+  }));
+}
+
+// ── List root folder contents (fallback if search finds nothing) ───────────
+async function listRoot() {
+  const t = await getToken();
+  const r = await fetch(G + '/me/drive/root/children', { headers: { Authorization: 'Bearer ' + t } });
+  const body = await r.json();
+  if (!r.ok) throw new Error('List root failed ' + r.status + ': ' + JSON.stringify(body));
+  return (body.value || []).map(f => ({ id: f.id, name: f.name, folder: !!f.folder }));
+}
+
+module.exports = { pushToOneDrive, pullFromOneDrive, startSyncLoop, listWorksheets, getFileInfo, findFile, listRoot };

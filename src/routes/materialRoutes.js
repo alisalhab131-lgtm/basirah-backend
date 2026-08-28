@@ -1,9 +1,22 @@
 const express = require('express');
 const router = express.Router();
 const { getMaterials, exportMaterials, loanCheck, createMaterial, deleteMaterial, previewExcel, commitExcel } = require('../controllers/materialController');
-const { pushToOneDrive, pullFromOneDrive, listWorksheets, getFileInfo } = require('../services/oneDriveSync');
+const { pushToOneDrive, pullFromOneDrive, listWorksheets, getFileInfo, findFile, listRoot } = require('../services/oneDriveSync');
 
 router.get('/export', exportMaterials);
+
+router.get('/sync/find-file', async (req, res) => {
+  try {
+    const name = req.query.name || 'INV.xlsx';
+    const results = await findFile(name);
+    res.json({ success: true, query: name, results });
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+router.get('/sync/root', async (req, res) => {
+  try { const items = await listRoot(); res.json({ success: true, items }); }
+  catch (err) { res.status(500).json({ error: err.message }); }
+});
 
 router.get('/sync/file-info', async (req, res) => {
   try { const info = await getFileInfo(); res.json({ success: true, info }); }
