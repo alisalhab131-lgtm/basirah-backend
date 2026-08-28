@@ -2,6 +2,8 @@ console.log("SERVER START");
 require('dotenv').config();
 const app = require('./app');
 require('./database/db');
+const { runMigrations } = require('./database/migrate');
+runMigrations();
 const { startSyncLoop } = require('./services/oneDriveSync');
 startSyncLoop();
 const PORT = process.env.PORT || 5000;

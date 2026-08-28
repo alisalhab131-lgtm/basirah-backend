@@ -97,7 +97,7 @@ function findAllMatches(name, existing, threshold=0.65) {
 
 const getMaterials = async (req, res) => {
   try {
-    res.json((await pool.query('SELECT * FROM materials ORDER BY id DESC')).rows);
+    res.json((await pool.query("SELECT * FROM materials WHERE is_deleted IS NOT TRUE ORDER BY id DESC")).rows);
   } catch (e) { res.status(500).json({ error: e.message }); }
 };
 

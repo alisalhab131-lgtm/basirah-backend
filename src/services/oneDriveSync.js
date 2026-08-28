@@ -86,7 +86,7 @@ async function pushToOneDrive() {
     'SELECT m.id, m.name, m.category, m.quantity AS in_stock, m.barcode, ' +
     'COUNT(l.id) FILTER (WHERE l.status NOT IN (' + "'Returned','Cancelled'" + ')) AS active_loans, ' +
     'COALESCE(SUM(l.quantity) FILTER (WHERE l.status NOT IN (' + "'Returned','Cancelled'" + ')),0) AS qty_on_loan ' +
-    'FROM materials m LEFT JOIN loans l ON l.material_id::integer = m.id GROUP BY m.id ORDER BY m.id ASC'
+    'FROM materials m LEFT JOIN loans l ON l.material_id::integer = m.id WHERE m.is_deleted IS NOT TRUE GROUP BY m.id ORDER BY m.id ASC'
   );
   const now = new Date().toISOString().replace('T',' ').slice(0,16);
   const values = [COLS, ...rows.map(r=>[r.id,r.name,r.category||'',Number(r.in_stock),r.barcode||'',Number(r.active_loans),Number(r.qty_on_loan),now])];

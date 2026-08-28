@@ -10,7 +10,7 @@ function syncToOneDrive() {
 
 const getContractors = async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM contractors ORDER BY id DESC');
+    const result = await pool.query("SELECT * FROM contractors WHERE is_deleted IS NOT TRUE ORDER BY id DESC");
     res.json(result.rows);
   } catch (error) { res.status(500).json({ error: error.message }); }
 };
