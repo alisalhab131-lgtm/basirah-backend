@@ -1,4 +1,17 @@
-const pool = require('../database/db');
+/**
+ * fix-session.js
+ * Adds:
+ *   1. GET /api/materials/sync/file-info  -> confirms the ONEDRIVE_FILE_ID resolves to a real file
+ *   2. Workbook session support (createSession) -> required for personal OneDrive Excel API calls
+ *   3. Updates listWorksheets, pushToOneDrive, pullFromOneDrive to use the session
+ */
+const fs = require('fs');
+const path = require('path');
+
+const SYNC_PATH   = path.join(__dirname, 'src', 'services', 'oneDriveSync.js');
+const ROUTES_PATH = path.join(__dirname, 'src', 'routes', 'materialRoutes.js');
+
+const newSync = `const pool = require('../database/db');
 let _token = null, _expiry = 0;
 
 async function getToken() {
@@ -139,3 +152,33 @@ function startSyncLoop() {
 }
 
 module.exports = { pushToOneDrive, pullFromOneDrive, startSyncLoop, listWorksheets, getFileInfo };
+`;
+
+fs.writeFileSync(SYNC_PATH, newSync);
+console.log('oneDriveSync.js rewritten with session support');
+
+// ── Add /sync/file-info route ────────────────────────────────────────────
+let routes = fs.readFileSync(ROUTES_PATH, 'utf8');
+
+routes = routes.replace(
+  /const \{ pushToOneDrive, pullFromOneDrive.*\} = require\('\.\.\/services\/oneDriveSync'\);/,
+  "const { pushToOneDrive, pullFromOneDrive, listWorksheets, getFileInfo } = require('../services/oneDriveSync');"
+);
+
+if (!routes.includes('sync/file-info')) {
+  routes = routes.replace(
+    "router.get('/sync/sheets',",
+    `router.get('/sync/file-info', async (req, res) => {
+  try { const info = await getFileInfo(); res.json({ success: true, info }); }
+  catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+router.get('/sync/sheets',`
+  );
+}
+
+fs.writeFileSync(ROUTES_PATH, routes);
+console.log('materialRoutes.js: added /sync/file-info route');
+console.log('');
+console.log('Done. Now run:');
+console.log('  git add -A && git commit -m "fix: add workbook session support + file-info diagnostic" && git push origin main');

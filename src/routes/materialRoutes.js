@@ -1,9 +1,14 @@
 const express = require('express');
 const router = express.Router();
 const { getMaterials, exportMaterials, loanCheck, createMaterial, deleteMaterial, previewExcel, commitExcel } = require('../controllers/materialController');
-const { pushToOneDrive, pullFromOneDrive, listWorksheets } = require('../services/oneDriveSync');
+const { pushToOneDrive, pullFromOneDrive, listWorksheets, getFileInfo } = require('../services/oneDriveSync');
 
 router.get('/export', exportMaterials);
+
+router.get('/sync/file-info', async (req, res) => {
+  try { const info = await getFileInfo(); res.json({ success: true, info }); }
+  catch (err) { res.status(500).json({ error: err.message }); }
+});
 
 router.get('/sync/sheets', async (req, res) => {
   try { const sheets = await listWorksheets(); res.json({ success: true, sheets }); }
