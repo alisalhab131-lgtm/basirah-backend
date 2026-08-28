@@ -162,4 +162,31 @@ async function listRoot() {
   return (body.value || []).map(f => ({ id: f.id, name: f.name, folder: !!f.folder }));
 }
 
-module.exports = { pushToOneDrive, pullFromOneDrive, startSyncLoop, listWorksheets, getFileInfo, findFile, listRoot };
+// ── List children of any folder by ID ───────────────────────────────────────
+async function listChildren(folderId) {
+  const t = await getToken();
+  const r = await fetch(G + '/me/drive/items/' + folderId + '/children', { headers: { Authorization: 'Bearer ' + t } });
+  const body = await r.json();
+  if (!r.ok) throw new Error('List children failed ' + r.status + ': ' + JSON.stringify(body));
+  return (body.value || []).map(f => ({ id: f.id, name: f.name, folder: !!f.folder, path: (f.parentReference ? f.parentReference.path : '') + '/' + f.name }));
+}
+
+// ── Recursively search all folders for a file by name (max depth 6) ───────
+async function deepFind(filename, folderId = null, depth = 0, maxDepth = 6, foundPath = '') {
+  if (depth > maxDepth) return [];
+  const children = folderId ? await listChildren(folderId) : await listRoot();
+  let matches = [];
+  for (const item of children) {
+    const itemPath = foundPath + '/' + item.name;
+    if (!item.folder && item.name.toLowerCase() === filename.toLowerCase()) {
+      matches.push({ id: item.id, name: item.name, path: itemPath });
+    }
+    if (item.folder) {
+      const nested = await deepFind(filename, item.id, depth + 1, maxDepth, itemPath);
+      matches = matches.concat(nested);
+    }
+  }
+  return matches;
+}
+
+module.exports = { pushToOneDrive, pullFromOneDrive, startSyncLoop, listWorksheets, getFileInfo, findFile, listRoot, listChildren, deepFind };

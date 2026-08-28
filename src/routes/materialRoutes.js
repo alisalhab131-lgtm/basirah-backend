@@ -1,9 +1,26 @@
 const express = require('express');
 const router = express.Router();
 const { getMaterials, exportMaterials, loanCheck, createMaterial, deleteMaterial, previewExcel, commitExcel } = require('../controllers/materialController');
-const { pushToOneDrive, pullFromOneDrive, listWorksheets, getFileInfo, findFile, listRoot } = require('../services/oneDriveSync');
+const { pushToOneDrive, pullFromOneDrive, listWorksheets, getFileInfo, findFile, listRoot, listChildren, deepFind } = require('../services/oneDriveSync');
 
 router.get('/export', exportMaterials);
+
+router.get('/sync/deep-find', async (req, res) => {
+  try {
+    const name = req.query.name || 'INV.xlsx';
+    const matches = await deepFind(name);
+    res.json({ success: true, query: name, matches });
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
+
+router.get('/sync/list-folder', async (req, res) => {
+  try {
+    const folderId = req.query.id;
+    if (!folderId) return res.status(400).json({ error: 'Provide ?id=FOLDER_ID' });
+    const items = await listChildren(folderId);
+    res.json({ success: true, items });
+  } catch (err) { res.status(500).json({ error: err.message }); }
+});
 
 router.get('/sync/find-file', async (req, res) => {
   try {
