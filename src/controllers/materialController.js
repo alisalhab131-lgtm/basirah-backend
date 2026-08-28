@@ -119,12 +119,13 @@ const loanCheck = async (req, res) => {
   try {
     const { rows: loans } = await pool.query(
       'SELECT l.id, l.quantity, l.status, c.contact_person, c.company_name ' +
-      'FROM loans l JOIN contractors c ON l.contractor_id=c.id ' +
-      'WHERE l.material_id::integer=$1 AND l.status NOT IN (' + "'Returned','Cancelled'" + ')',
+      'FROM loans l JOIN contractors c ON l.contractor_id::integer = c.id ' +
+      'WHERE l.material_id::integer = $1 ORDER BY l.id DESC',
       [req.params.id]
     );
-    res.json({ hasLoans: loans.length > 0, loans });
-  } catch (e) { res.status(500).json({ error: e.message }); }
+    const activeLoans = loans.filter(l => !['Returned', 'Cancelled'].includes(l.status));
+    res.json({ hasLoans: loans.length > 0, hasActiveLoans: activeLoans.length > 0, loans });
+  } catch (error) { res.status(500).json({ error: error.message }); }
 };
 
 const createMaterial = async (req, res) => {
@@ -159,42 +160,47 @@ const deleteMaterial = async (req, res) => {
   const { id } = req.params;
   const strategy = (req.query.strategy || 'block').toLowerCase();
   const client = await pool.connect();
-  
   try {
     await client.query('BEGIN');
-    const { rows: active } = await client.query(
-      'SELECT id FROM loans WHERE material_id::integer=$1 AND status NOT IN (' + "'Returned','Cancelled'" + ') LIMIT 1',
-      [id]
+    // Check for ANY loan history (not just active) - historical rows still
+    // block a raw DELETE due to the foreign key, even if status is Returned.
+    const { rows: anyLoans } = await client.query(
+      'SELECT id, status FROM loans WHERE material_id::integer=$1', [id]
     );
-    
-    if (active.length && strategy === 'block') {
+    const hasActive = anyLoans.some(l => !['Returned','Cancelled'].includes(l.status));
+
+    if (anyLoans.length && strategy === 'block') {
       await client.query('ROLLBACK');
-      return res.status(409).json({ error: 'Has active loans. Use cascade or soft.' });
+      return res.status(409).json({
+        error: hasActive
+          ? 'Material has active loans. Choose cascade or soft strategy.'
+          : 'Material has historical loan records. Choose cascade (delete history too) or soft (archive, keep history).'
+      });
     }
-    
+
     if (strategy === 'cascade') {
       await client.query('DELETE FROM loans WHERE material_id::integer=$1', [id]);
       await client.query('DELETE FROM materials WHERE id=$1', [id]);
     } else if (strategy === 'soft') {
-      await client.query(
-        'UPDATE loans SET status=' + "'Cancelled'" + ' WHERE material_id::integer=$1 AND status NOT IN (' + "'Returned','Cancelled'" + ')',
-        [id]
-      );
+      await client.query("UPDATE loans SET status='Cancelled' WHERE material_id::integer=$1 AND status NOT IN ('Returned','Cancelled')", [id]);
       try { await client.query('UPDATE materials SET is_deleted=TRUE,deleted_at=NOW() WHERE id=$1', [id]); }
       catch { await client.query('DELETE FROM materials WHERE id=$1', [id]); }
     } else {
+      // No loans at all - safe to hard delete
       const { rowCount } = await client.query('DELETE FROM materials WHERE id=$1', [id]);
       if (!rowCount) { await client.query('ROLLBACK'); return res.status(404).json({ error: 'Not found.' }); }
     }
-    
     await client.query('COMMIT');
-    
-    syncToOneDrive(); // Keep Excel updated after deletion
-    
+    syncToOneDrive();
     res.json({ message: 'Deleted.', strategy });
-  } catch (e) {
+  } catch (error) {
     await client.query('ROLLBACK');
-    res.status(500).json({ error: e.message });
+    // Safety net: if Postgres still reports a FK violation for any
+    // reason we didn't anticipate, respond cleanly instead of a raw 500.
+    if (error.code === '23503') {
+      return res.status(409).json({ error: 'This material is still referenced by loan records. Use cascade or soft strategy.' });
+    }
+    res.status(500).json({ error: error.message });
   } finally { client.release(); }
 };
 

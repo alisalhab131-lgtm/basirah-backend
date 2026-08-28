@@ -44,10 +44,11 @@ const loanCheck = async (req, res) => {
     const { rows: loans } = await pool.query(
       'SELECT l.id, l.quantity, l.status, m.name AS material_name ' +
       'FROM loans l JOIN materials m ON l.material_id::integer = m.id ' +
-      'WHERE l.contractor_id::integer = $1 AND l.status NOT IN (' + "'Returned','Cancelled'" + ')',
+      'WHERE l.contractor_id::integer = $1 ORDER BY l.id DESC',
       [req.params.id]
     );
-    res.json({ hasLoans: loans.length > 0, loans });
+    const activeLoans = loans.filter(l => !['Returned', 'Cancelled'].includes(l.status));
+    res.json({ hasLoans: loans.length > 0, hasActiveLoans: activeLoans.length > 0, loans });
   } catch (error) { res.status(500).json({ error: error.message }); }
 };
 
@@ -60,14 +61,20 @@ const deleteContractor = async (req, res) => {
   const client = await pool.connect();
   try {
     await client.query('BEGIN');
-    const { rows: active } = await client.query(
-      'SELECT id FROM loans WHERE contractor_id::integer=$1 AND status NOT IN (' + "'Returned','Cancelled'" + ') LIMIT 1',
-      [id]
+    const { rows: anyLoans } = await client.query(
+      'SELECT id, status FROM loans WHERE contractor_id::integer=$1', [id]
     );
-    if (active.length && strategy === 'block') {
+    const hasActive = anyLoans.some(l => !['Returned','Cancelled'].includes(l.status));
+
+    if (anyLoans.length && strategy === 'block') {
       await client.query('ROLLBACK');
-      return res.status(409).json({ error: 'Contractor has active loans. Use cascade or soft strategy.' });
+      return res.status(409).json({
+        error: hasActive
+          ? 'Contractor has active loans. Use cascade or soft strategy.'
+          : 'Contractor has historical loan records. Choose cascade (delete history too) or soft (archive, keep history).'
+      });
     }
+
     if (strategy === 'cascade') {
       await client.query('DELETE FROM loans WHERE contractor_id::integer=$1', [id]);
       await client.query('DELETE FROM contractors WHERE id=$1', [id]);
@@ -87,6 +94,9 @@ const deleteContractor = async (req, res) => {
     res.json({ message: 'Deleted.', strategy });
   } catch (error) {
     await client.query('ROLLBACK');
+    if (error.code === '23503') {
+      return res.status(409).json({ error: 'This contractor is still referenced by loan records. Use cascade or soft strategy.' });
+    }
     res.status(500).json({ error: error.message });
   } finally { client.release(); }
 };
