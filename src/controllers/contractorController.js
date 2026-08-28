@@ -76,6 +76,7 @@ const deleteContractor = async (req, res) => {
     }
 
     if (strategy === 'cascade') {
+      await client.query('DELETE FROM returns WHERE loan_id IN (SELECT id FROM loans WHERE contractor_id::integer=$1)', [id]);
       await client.query('DELETE FROM loans WHERE contractor_id::integer=$1', [id]);
       await client.query('DELETE FROM contractors WHERE id=$1', [id]);
     } else if (strategy === 'soft') {

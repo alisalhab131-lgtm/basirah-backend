@@ -179,6 +179,9 @@ const deleteMaterial = async (req, res) => {
     }
 
     if (strategy === 'cascade') {
+      // Delete returns FIRST (they reference loans via loan_id),
+      // then loans (they reference this material), then the material itself.
+      await client.query('DELETE FROM returns WHERE loan_id IN (SELECT id FROM loans WHERE material_id::integer=$1)', [id]);
       await client.query('DELETE FROM loans WHERE material_id::integer=$1', [id]);
       await client.query('DELETE FROM materials WHERE id=$1', [id]);
     } else if (strategy === 'soft') {
