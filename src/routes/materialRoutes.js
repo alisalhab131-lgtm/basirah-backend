@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getMaterials, exportMaterials, loanCheck, createMaterial, deleteMaterial, previewExcel, commitExcel } = require('../controllers/materialController');
+const { getMaterials, exportMaterials, loanCheck, createMaterial, updateMaterial, deleteMaterial, previewExcel, commitExcel } = require('../controllers/materialController');
 const { pushToOneDrive, pullFromOneDrive, listWorksheets, getFileInfo, findFile, listRoot, listChildren, deepFind } = require('../services/oneDriveSync');
 
 router.get('/export', exportMaterials);
@@ -51,6 +51,7 @@ router.post('/sync/pull', async (req, res) => { try { const r = await pullFromOn
 router.get('/', getMaterials);
 router.post('/', createMaterial);
 router.get('/:id/loan-check', loanCheck);
+router.put('/:id', updateMaterial);
 router.delete('/:id', deleteMaterial);
 
 module.exports = router;

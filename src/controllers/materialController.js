@@ -141,6 +141,20 @@ const createMaterial = async (req, res) => {
   } catch (e) { res.status(500).json({ error: e.message }); }
 };
 
+const updateMaterial = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { name, category, quantity, barcode } = req.body;
+    const result = await pool.query(
+      'UPDATE materials SET name=$1, category=$2, quantity=$3, barcode=$4 WHERE id=$5 RETURNING *',
+      [name, category, quantity, barcode, id]
+    );
+    if (!result.rows.length) return res.status(404).json({ error: 'Material not found.' });
+    syncToOneDrive();
+    res.json(result.rows[0]);
+  } catch (e) { res.status(500).json({ error: e.message }); }
+};
+
 const deleteMaterial = async (req, res) => {
   const { id } = req.params;
   const strategy = (req.query.strategy || 'block').toLowerCase();
@@ -277,4 +291,4 @@ const commitExcel = async (req, res) => {
   });
 };
 
-module.exports = { getMaterials, exportMaterials, loanCheck, createMaterial, deleteMaterial, previewExcel, commitExcel };
+module.exports = { getMaterials, exportMaterials, loanCheck, createMaterial, updateMaterial, deleteMaterial, previewExcel, commitExcel };
