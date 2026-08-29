@@ -134,8 +134,11 @@ function startSyncLoop() {
   if (!process.env.ONEDRIVE_REFRESH_TOKEN) { console.log('[OneDrive] Disabled - no refresh token'); return; }
   const ms = parseInt(process.env.ONEDRIVE_SYNC_INTERVAL || '5', 10) * 60000;
   const run = async (d) => { try { if (d === 'pull') await pullFromOneDrive(); if (d === 'push') await pushToOneDrive(); } catch (e) { console.error('[OneDrive] ' + d + ':', e.message); } };
-  setTimeout(() => run('pull'), 5000); setTimeout(() => run('push'), 12000); setInterval(() => run('pull'), ms);
-  console.log('[OneDrive] Sync every ' + (ms / 60000) + ' min');
+  setTimeout(() => run('pull'), 5000);
+  setTimeout(() => run('push'), 12000);
+  // Both directions now run on the recurring interval, not just pull
+  setInterval(async () => { await run('pull'); await run('push'); }, ms);
+  console.log('[OneDrive] Sync every ' + (ms / 60000) + ' min (both directions)');
 }
 
 // ── Find a file by name anywhere in OneDrive (returns real item ID) ────────
@@ -189,4 +192,10 @@ async function deepFind(filename, folderId = null, depth = 0, maxDepth = 6, foun
   return matches;
 }
 
-module.exports = { pushToOneDrive, pullFromOneDrive, startSyncLoop, listWorksheets, getFileInfo, findFile, listRoot, listChildren, deepFind };
+async function heartbeat() {
+  const pullResult = await pullFromOneDrive().catch(e => ({ error: e.message }));
+  const pushResult = await pushToOneDrive().catch(e => ({ error: e.message }));
+  return { pull: pullResult, push: pushResult, timestamp: new Date().toISOString() };
+}
+
+module.exports = { pushToOneDrive, pullFromOneDrive, startSyncLoop, listWorksheets, getFileInfo, findFile, listRoot, listChildren, deepFind, heartbeat };
