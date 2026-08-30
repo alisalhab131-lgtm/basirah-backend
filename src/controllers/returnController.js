@@ -98,4 +98,40 @@ const createReturn = async (req, res) => {
   }
 };
 
-module.exports = { getReturns, createReturn, getLoanReturnStatus };
+
+const deleteReturn = async (req, res) => {
+  const { id } = req.params;
+  const client = await pool.connect();
+  try {
+    await client.query('BEGIN');
+
+    const { rows } = await client.query('SELECT * FROM returns WHERE id=$1', [id]);
+    if (!rows.length) { await client.query('ROLLBACK'); return res.status(404).json({ error: 'Return record not found.' }); }
+    const ret = rows[0];
+
+    const { rows: loanRows } = await client.query('SELECT material_id, quantity FROM loans WHERE id=$1', [ret.loan_id]);
+    if (!loanRows.length) { await client.query('ROLLBACK'); return res.status(404).json({ error: 'Associated loan not found.' }); }
+    const loan = loanRows[0];
+    const qtyToReverse = Number(ret.quantity || loan.quantity || 0);
+
+    // Undo the stock restoration this return caused
+    await client.query('UPDATE materials SET quantity = quantity - $1 WHERE id=$2', [qtyToReverse, loan.material_id]);
+
+    // Remove the return record itself
+    await client.query('DELETE FROM returns WHERE id=$1', [id]);
+
+    // Recompute loan status from whatever returns (if any) still remain
+    const { rows: sumRows } = await client.query('SELECT COALESCE(SUM(quantity),0) as total FROM returns WHERE loan_id=$1', [ret.loan_id]);
+    const totalReturned = parseInt(sumRows[0].total, 10) || 0;
+    const newStatus = totalReturned <= 0 ? 'Borrowed' : (totalReturned < Number(loan.quantity) ? 'Partially Returned' : 'Returned');
+    await client.query('UPDATE loans SET status=$1 WHERE id=$2', [newStatus, ret.loan_id]);
+
+    await client.query('COMMIT');
+    res.json({ message: 'Return deleted and reversed.', reversed_quantity: qtyToReverse, loan_status: newStatus });
+  } catch (error) {
+    await client.query('ROLLBACK');
+    res.status(500).json({ error: error.message });
+  } finally { client.release(); }
+};
+
+module.exports = { getReturns, createReturn, getLoanReturnStatus, deleteReturn };
